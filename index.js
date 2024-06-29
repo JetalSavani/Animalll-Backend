@@ -35,7 +35,9 @@ const serviceRoutes = require("./routes/service.routes")
 const imageRoutes = require("./routes/upload-image")
 
 // Define All Routes Here
-app.get('/',()=>{console.log("welcome to Animal")})
+app.get('/',(req,res)=>{
+	res.send("welcome to Animal");
+})
 app.use("/users", userRoutes)
 app.use("/category", categoryRoutes)
 app.use("/subcategory", subCategoryRoutes)
